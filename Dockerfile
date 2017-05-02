@@ -14,5 +14,5 @@
 #    along with chown .  If not, see <http://www.gnu.org/licenses/>.
 FROM wildwarehouse/fedora:0.0.0
 USER root
-ENTRYPOINT ["chown"]
-CMD ["user:user", "/srv"]
+COPY root /opt/docker
+ENTRYPOINT ["/usr/bin/sh", "/opt/docker/entrypoint.sh"]
