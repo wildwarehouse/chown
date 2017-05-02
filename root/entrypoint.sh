@@ -1,4 +1,4 @@
 #!/bin/sh
 
-mkdir /srv/volume &&
-    chown user:user /srv/volume
+mkdir /srv/${NAME} &&
+    chown user:user /srv/${NAME}
