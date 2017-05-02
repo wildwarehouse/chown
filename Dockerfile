@@ -14,8 +14,5 @@
 #    along with chown .  If not, see <http://www.gnu.org/licenses/>.
 FROM wildwarehouse/fedora:0.0.0
 USER root
-RUN chown user:user /srv
-USER user
-VOLUME /srv
-ENTRYPOINT ["stat"]
-CMD ["/srv"]
+ENTRYPOINT ["chown"]
+CMD ["user:user", "/srv"]
